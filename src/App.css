@@ -1,7 +1,15 @@
 .App {
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
 }
-
+.text-custom-secondary{
+  color: rgb(3, 37, 80);
+}
+.text-custom-danger{
+  color: rgb(253, 75, 119);
+}
+.bg-custom-danger{
+  background: rgb(253, 75, 119)
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

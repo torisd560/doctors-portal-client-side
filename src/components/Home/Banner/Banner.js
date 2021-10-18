@@ -15,9 +15,9 @@ const Banner = () => {
                             alt="First slide"
                         />
                         <Carousel.Caption>
-                            <h1 className='text-uppercase fw-bold'>Female<span className='text-danger'> care</span></h1>
+                            <h1 className='text-uppercase fw-bold'>Female<span className='text-custom-danger'> care</span></h1>
                             <p>Welcome to Female Health Care Without Harm! Please join us as we work to transform the health sector worldwide, promoting environmental health and justice</p>
-                            <Button variant="danger" className='text-uppercase'>Our Services</Button>
+                            <Button className='text-uppercase bg-custom-danger border-0'>Our Services</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -27,9 +27,9 @@ const Banner = () => {
                             alt="Second slide"
                         />
                         <Carousel.Caption>
-                            <h1 className='text-uppercase fw-bold'>Trusted <span className='text-danger'>Gynecologists</span></h1>
+                            <h1 className='text-uppercase fw-bold'>Trusted <span className='text-custom-danger'>Gynecologists</span></h1>
                             <p>A gynecologist treats patients with female reproductive organs, whether or not they identify as women. An obstetrician is a kind of gynecologist who specializes ...</p>
-                            <Button variant="danger" className='text-uppercase'>Our Doctors</Button>
+                            <Button  className='text-uppercase bg-custom-danger border-0'>Our Doctors</Button>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>

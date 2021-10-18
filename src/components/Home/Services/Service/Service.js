@@ -9,11 +9,11 @@ const Service = (props) => {
       <Card>
         <Card.Img variant="top" src={img} style ={{height : '300px'}}/>
         <Card.Body>
-          <Card.Title className = 'text-center text-danger fw-bold'>{serviceName}</Card.Title>
+          <Card.Title className = 'text-center text-custom-danger fw-bold'>{serviceName}</Card.Title>
           <Card.Text>
            {description.slice(0, 100)}.
           </Card.Text>
-          <Button variant="danger">See More</Button>
+          <Button className="bg-custom-danger border-0">See More</Button>
         </Card.Body>
       </Card>
     </Col>

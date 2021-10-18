@@ -17,7 +17,7 @@ const Footer = () => {
                 <span className='ms-3'>About</span>
                 <span className='ms-3'>Contact Us</span>
             </div>
-            <Button variant="danger" ><i className="fas fa-chevron-up"></i></Button>
+            <Button className = 'bg-custom-danger border-0' ><i className="fas fa-chevron-up"></i></Button>
         </div>
     );
 };
