@@ -13,7 +13,7 @@ const Service = (props) => {
           <Card.Text>
             {description.slice(0, 100)}.
           </Card.Text>
-          <Link to ={`/service/${id}`}>
+          <Link to={`/service/${id}`}>
             <Button className="bg-custom-danger border-0">See More</Button>
           </Link>
         </Card.Body>
