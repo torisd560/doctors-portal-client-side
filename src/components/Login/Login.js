@@ -1,12 +1,21 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link , useLocation} from 'react-router-dom';
+import { Link , useLocation, useHistory} from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
     const { handleGoogleSignIn, handleGithubSignIn, handleEmail, handlePassword, handleLogin, resetPassword, error,} = useAuth()
     const location = useLocation()
+    const history = useHistory()
+    const redirect_url = location.state?.from ||'/home'
+
+    const handleGoogleLogin = () =>{
+        handleGoogleSignIn()
+        .then(result =>{
+            history.push(redirect_url)
+        })
+    }
     return (
         <div>
             <div className='my-5 mx-auto w-50'>
@@ -35,7 +44,7 @@ const Login = () => {
                 </form>
                 <div>
                     <p className='my-4 text-custom-secondary fw-bold'>---------Or Sign In With--------</p>
-                    <Button onClick={handleGoogleSignIn} variant="warning" className='me-3'><i className="fab fa-google text-white fs-3 px-5"></i></Button>
+                    <Button onClick={handleGoogleLogin} variant="warning" className='me-3'><i className="fab fa-google text-white fs-3 px-5"></i></Button>
                     <Button onClick={handleGithubSignIn} variant="secondary"><i className="fab fa-github text-white fs-3 px-5"></i></Button>
                 </div>
 
