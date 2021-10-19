@@ -10,6 +10,7 @@ import Header from './components/Shared/Header';
 import Login from './components/Login/Login';
 import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -27,9 +28,9 @@ function App() {
             <Route path='/about'>
               <About></About>
             </Route>
-            <Route path='/service/:serviceId'>
+            <PrivateRoute path='/service/:serviceId'>
               <ServiceDetail></ServiceDetail>
-            </Route>
+            </PrivateRoute>
             <Route path='/contact'>
               <ContactUs></ContactUs>
             </Route>
