@@ -1,10 +1,10 @@
 .underline{
-    width: 50px;
+    width: 30px;
     height: 4px;
     background: rgb(253, 75, 119);
 }
 .underline-small{
-    width: 50px;
+    width: 30px;
     height: 8px;
     background: rgb(253, 75, 119);
    

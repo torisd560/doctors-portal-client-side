@@ -3,12 +3,12 @@ import './App.css';
 import About from './components/About/About';
 import Apoinments from './components/Apoinments/Apoinments';
 import ContactUs from './components/Contact/ContactUs';
-import Doctors from './components/Doctors/Doctors';
 import Home from './components/Home/Home';
-import Services from './components/Services/Services';
 import Footer from './components/Shared/Footer/Footer';
 import NotFound from './components/NotFound/NotFound'
 import Header from './components/Shared/Header';
+import Login from './components/Login/Login';
+import ServiceDetail from './components/ServiceDetail/ServiceDetail';
 
 function App() {
   return (
@@ -25,17 +25,17 @@ function App() {
           <Route path='/about'>
             <About></About>
           </Route>
-          <Route path='/services'>
-            <Services></Services>
-          </Route>
-          <Route path='/doctors'>
-            <Doctors></Doctors>.
+          <Route path='/service/:serviceId'>
+            <ServiceDetail></ServiceDetail>
           </Route>
           <Route path='/contact'>
             <ContactUs></ContactUs>
           </Route>
           <Route path='/apoinment'>
             <Apoinments></Apoinments>
+          </Route>
+          <Route path='/login'>
+            <Login></Login>
           </Route>
           <Route path='*'>
             <NotFound></NotFound>

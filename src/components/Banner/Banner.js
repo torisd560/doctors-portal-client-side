@@ -1,7 +1,7 @@
 import React from 'react';
 import { Carousel , Button } from 'react-bootstrap';
-import slider1 from '../../../images/slider1.jpg'
-import slider2 from '../../../images/slider2.jpg'
+import slider1 from '../../images/slider1.jpg'
+import slider2 from '../../images/slider2.jpg'
 
 const Banner = () => {
     return (
@@ -14,7 +14,7 @@ const Banner = () => {
                             src={slider1}
                             alt="First slide"
                         />
-                        <Carousel.Caption>
+                        <Carousel.Caption >
                             <h1 className='text-uppercase fw-bold'>Female<span className='text-custom-danger'> care</span></h1>
                             <p>Welcome to Female Health Care Without Harm! Please join us as we work to transform the health sector worldwide, promoting environmental health and justice</p>
                             <Button className='text-uppercase bg-custom-danger border-0'>Our Services</Button>
