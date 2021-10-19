@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
-import useFirebase from '../hooks/useFirebase';
+import useAuth from '../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
     const [toggle, setToggle] = useState(false)
 
-    const { handleGoogleSignIn, handleGithubSignIn, handleEmail, handlePassword, handleLogin,handleSignUp, resetPassword, handleNameChange, error } = useFirebase()
+    const { handleGoogleSignIn, handleGithubSignIn, handleEmail, handlePassword, handleLogin,handleSignUp, resetPassword, handleNameChange, error } = useAuth()
     return (
         <div>
             {toggle ? <div className='my-5 mx-auto w-50'>
