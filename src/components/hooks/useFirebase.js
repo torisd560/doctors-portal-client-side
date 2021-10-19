@@ -14,12 +14,15 @@ const useFirebase = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
+    const [isLoading , setIsLoading] = useState(true)
 
     const auth = getAuth();
 
     const handleGoogleSignIn = () => {
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => setUser(result.user))
+            .finally(()=>setIsLoading(false))
     }
 
     const handleGithubSignIn = () => {
@@ -82,15 +85,18 @@ const useFirebase = () => {
             else {
                 setUser({})
             }
+            setIsLoading(false)
         })
         return () => unsubcribed;
     }, [])
 
     const logOut = () => {
+        setIsLoading(true)
         signOut(auth)
             .then(() => {
                 setUser({})
             })
+            .finally(()=>setIsLoading(false))
     }
 
     const resetPassword = () => {
@@ -112,7 +118,8 @@ const useFirebase = () => {
         logOut,
         resetPassword,
         user,
-        error
+        error,
+        isLoading
     }
 };
 export default useFirebase;
