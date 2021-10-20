@@ -14,7 +14,7 @@ const ContactUs = () => {
             <Container className='my-5 text-secondary'>
                 < Row >
                     <Col>
-                        <h4 className='text-uppercase text-custom-secondary'>Sent message here</h4>
+                        <h4 className='text-uppercase text-custom-secondary fw-bold'>Sent message here</h4>
                         <Form className='mt-4'>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label><i class="fas fa-user me-2 text-custom-danger"></i>Name</Form.Label>
@@ -34,7 +34,7 @@ const ContactUs = () => {
                         </Form.Group>
                     </Col>
                     <Col>
-                        < h5 className=' text-uppercase text-custom-secondary' id='apoinment'><i class="fas fa-user-md me-2"></i>Request apoinmetn here</h5>
+                        < h5 className=' text-uppercase text-custom-secondary fw-bold' id='apoinment'><i class="fas fa-user-md me-2"></i>Request apoinmetn here</h5>
                         <div className='mt-4 text-secondary' >
                             <h5 className='text-custom-danger fw-bold'><i class="fas fa-building  me-2 text-custom-secondary fs-3"></i>Our Branches</h5>
                             <p >Lima - AV Los Olivos N° 2520

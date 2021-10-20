@@ -64,23 +64,29 @@ const Footer = () => {
                     </div>
                 </div>
             </Container>
-                <hr className='bg-light' />
+            <hr className='bg-light' />
             {/* -------------footer last part --------------*/}
-            <div className='bg-custom-secondary  text-white  d-flex justify-content-around align-items-center p-4'>
-                <span>© 2021 Your Company. By Unitemplates</span>
-                <div className='footer-icon'>
+            <Container>
+            <div className=' bg-custom-secondary text-white d-flex justify-content-center align-items-center p-4'>
+                <div className=' col-md-3'>
+                    <span>Copyright © 2021 by Medico </span>
+                </div>
+                <div className=' col-md-3 footer-icon'>
                     <a href="/"><i className="fab fa-facebook-square fs-3 "></i></a>
                     <a href="/"><i className="fab fa-github-square fs-3  ms-3"></i></a>
                     <a href="/"><i className="fab fa-twitter-square fs-3  ms-3"></i></a>
                     <a href="/"><i className="fab fa-linkedin fs-3  ms-3"></i></a>
                 </div>
-                <div>
+                <div className=' col-md-3'>
                     <span >Home</span>
                     <span className='ms-3'>About</span>
                     <span className='ms-3'>Contact Us</span>
                 </div>
-                <Button className='bg-custom-danger border-0' ><i className="fas fa-chevron-up"></i></Button>
+                <div className=' col-md-3'>
+                    <Button className='bg-custom-danger border-0' ><i className="fas fa-chevron-up"></i></Button>
+                </div>
             </div>
+            </Container>
         </div>
     );
 };

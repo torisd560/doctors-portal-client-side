@@ -2,10 +2,10 @@
   font-family: 'Roboto', sans-serif;
 }
 .text-custom-secondary{
-  color: rgb(31, 39, 49);
+  color: rgb(11, 15, 77);
 }
 .bg-custom-secondary{
-  background-color: #203646;
+  background-color: #203646
 }
 .text-custom-danger{
   color: rgb(255, 118, 152);
