@@ -1,21 +1,23 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { Link , useLocation, useHistory} from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import './Login.css'
 
 const Login = () => {
-    const { handleGoogleSignIn, handleGithubSignIn, handleEmail, handlePassword, handleLogin, resetPassword, error,} = useAuth()
+    const { handleGoogleSignIn, handleEmail, handlePassword, handleLogin, resetPassword, error, } = useAuth()
     const location = useLocation()
     const history = useHistory()
-    const redirect_url = location.state?.from ||'/home'
+    const redirect_url = location.state?.from || '/home'
 
-    const handleGoogleLogin = () =>{
+
+    const handleGoogleLogin = () => {
         handleGoogleSignIn()
-        .then(result =>{
-            history.push(redirect_url)
-        })
+            .then(() => {
+                history.push(redirect_url)
+            })
     }
+
     return (
         <div>
             <div className='my-5 mx-auto w-50'>
@@ -36,21 +38,14 @@ const Login = () => {
                     </div>
 
                     <div>
-                        <button type="submit" className="btn bg-custom-danger text-white me-3 px-4 mt-3">Login</button>
-                        <span className='custom-cursor-style text-primary' onClick={resetPassword}> Forgot Password ? </span>
+                        <p className='custom-cursor-style text-primary' onClick={resetPassword}> Forgot Password ? </p>
+                        <button type="submit" className="btn bg-custom-danger text-white me-3 px-4 mt-2">Login</button>
+                        <Button onClick={handleGoogleLogin} variant="warning" className='me-3 mt-2'><i className="fab fa-google text-white fs-5 px-4 "></i></Button>
+                        <Link to='/register'> <p className='custom-cursor-style text-primary mt-4'>Create an  new account?</p></Link>
                         <p className='text-danger fw-bold mt-4'>{error}</p>
                     </div>
 
                 </form>
-                <div>
-                    <p className='my-4 text-custom-secondary fw-bold'>---------Or Sign In With--------</p>
-                    <Button onClick={handleGoogleLogin} variant="warning" className='me-3'><i className="fab fa-google text-white fs-3 px-5"></i></Button>
-                    <Button onClick={handleGithubSignIn} variant="secondary"><i className="fab fa-github text-white fs-3 px-5"></i></Button>
-                </div>
-
-            </div>
-            <div className='mt-4 text-center text-primary '>
-                <Link to='/register'> <p className='custom-cursor-style'>Create an  new account?</p></Link>
             </div>
         </div>
     );

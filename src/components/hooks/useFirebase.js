@@ -1,12 +1,11 @@
 import { useEffect } from 'react'
 import initializeFirebaseAuthentication from '../../firebase/firebase.init'
-import { getAuth, signInWithPopup, GoogleAuthProvider, GithubAuthProvider, createUserWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword, sendPasswordResetEmail, onAuthStateChanged, updateProfile, signOut } from "firebase/auth";
 import { useState } from 'react';
 
 
 initializeFirebaseAuthentication()
 const googleProvider = new GoogleAuthProvider();
-const githubProvider = new GithubAuthProvider();
 
 const useFirebase = () => {
     const [user, setUser] = useState({})
@@ -25,12 +24,6 @@ const useFirebase = () => {
             .finally(()=>setIsLoading(false))
     }
 
-    const handleGithubSignIn = () => {
-        signInWithPopup(auth, githubProvider)
-
-            .then(result => setUser(result.user))
-    }
-
     const handleNameChange = e => {
         setName(e.target.value)
     }
@@ -41,15 +34,15 @@ const useFirebase = () => {
 
     const handleEmail = e => {
         setEmail(e.target.value)
-        console.log(email)
+        
     }
     const handlePassword = e => {
         setPassword(e.target.value)
-        console.log(password)
+       
     }
     const handleLogin = e => {
         e.preventDefault()
-        createUserWithEmailAndPassword(auth, email, password)
+       createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user)
                 setError('')
@@ -96,6 +89,7 @@ const useFirebase = () => {
             .then(() => {
                 setUser({})
             })
+            .catch(error=>setError(error.message))
             .finally(()=>setIsLoading(false))
     }
 
@@ -109,7 +103,6 @@ const useFirebase = () => {
 
     return {
         handleGoogleSignIn,
-        handleGithubSignIn,
         handleNameChange,
         handleEmail,
         handlePassword,

@@ -13,6 +13,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top" className='fw-bold'>
                 <Container>
                     <Navbar.Brand href="#home">
+                    <span className = 'fw-bold text-custom-secondary'> FEMALE CARE</span>
                         <img src={logoImg} style={{width: '100px'}} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
