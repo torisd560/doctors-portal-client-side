@@ -18,7 +18,7 @@ const Home = () => {
                 <div className="col-md-5">
                     <h1 className='text-custom-secondary fw-bold'>Quality and confidentiality</h1>
                     <div className="underline "></div>
-                    <p className='mt-4 lh-lg'>A gynecologist is a doctor specializing in the female reproductive organs. The American College of Obstetricians and Gynecologists recommends that young women make their first visit for reproductive health between the ages of 13 and 15. Women may visit yearly, or as needed, after that.Physicians for Women is a Women's Health Connecticut practice with ... I just can't say enough about the quality of care I received from Dr. LaMonica!Physicians for Women is a Women's Health Connecticut practice with I just can't say enough about the quality of care I received from Dr.</p>
+                    <p className='mt-4 lh-lg text-secondary'>A gynecologist is a doctor specializing in the female reproductive organs. The American College of Obstetricians and Gynecologists recommends that young women make their first visit for reproductive health between the ages of 13 and 15. Women may visit yearly, or as needed, after that.Physicians for Women is a Women's Health Connecticut practice with ... I just can't say enough about the quality of care I received from Dr. LaMonica!Physicians for Women is a Women's Health Connecticut practice with I just can't say enough about the quality of care I received from Dr.</p>
                 </div>
             </div>
             <Doctors></Doctors>

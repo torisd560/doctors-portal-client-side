@@ -1,17 +1,20 @@
 import React from 'react';
 import { Col, Container, Form, Row } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
-import contactImg from '../../images/contact.png'
+
 
 const ContactUs = () => {
     return (
         <div>
-            <img src={contactImg} alt="" className=' w-100 h-25' />
+            <Col className='top-banner w-auto text-white fw-bold px-5'>
+                <h1 >Contact Us</h1>
+                <p><i class="fas fa-map-marker-alt me-2"></i>Home / Contact</p>
+            </Col>
 
             <Container className='my-5 text-secondary'>
                 < Row >
                     <Col>
-                        <h3 className='text-uppercase text-custom'>Sent a massage</h3>
+                        <h4 className='text-uppercase text-custom-secondary'>Sent message here</h4>
                         <Form className='mt-4'>
                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                 <Form.Label><i class="fas fa-user me-2 text-custom-danger"></i>Name</Form.Label>
@@ -20,23 +23,35 @@ const ContactUs = () => {
                                 <Form.Control className="mb-3" type="email" />
                                 <Form.Label><i class="far fa-file-alt me-2 text-custom-danger"></i>Subjects</Form.Label>
                                 <Form.Control className="mb-3" type="text" />
-                                <Button variant="" className='fw-bold text-white mt-3 px-5 bg-custom-warning'>Submit</Button>
+                                <Button className='fw-bold text-white mt-3 px-4 py-2 bg-custom-danger border-0'><i class="fas fa-paper-plane me-2"></i>Send Message</Button>
                             </Form.Group>
                         </Form>
                     </Col>
-                    <Col className='mt-3'>
+                    <Col>
                         <Form.Group className="mt-5" controlId="exampleForm.ControlTextarea1">
-                            <Form.Label><i class="fas fa-comments me-2 text-custom-danger"></i>Comments</Form.Label>
+                            <Form.Label><i class="fas fa-comments me-2 text-custom-danger"></i>Message</Form.Label>
                             <Form.Control as="textarea" rows={11} />
                         </Form.Group>
                     </Col>
                     <Col>
-                        <h3 className='text-uppercase text-custom'>contact info</h3>
+                        < h5 className=' text-uppercase text-custom-secondary' id='apoinment'><i class="fas fa-user-md me-2"></i>Request apoinmetn here</h5>
                         <div className='mt-4 text-secondary' >
-                            <p >Sed ut imperdiet nisi. Proin condimentum . Etiam pharetra erat sed fermentum feugiat velit mauris egestas quam ut aliquam .</p>
-                            <p><i class="fas fa-home me-2 text-custom-danger"></i>99123 Street Down Town, California, USA</p>
-                            <p><i class="fas fa-phone-alt me-2 text-custom-danger"></i>5 (012) 4565 789</p>
-                            <a href="/" class="text-decoration-none"><i class="far fa-envelope me-2 text-custom-danger"></i>Info@Info.Com</a>
+                            <h5 className='text-custom-danger fw-bold'><i class="fas fa-building  me-2 text-custom-secondary fs-3"></i>Our Branches</h5>
+                            <p >Lima - AV Los Olivos N° 2520
+                                <br />
+                                Cusco - Calle Real N° 5720</p>
+                            <h5 className='text-custom-danger fw-bold'><i class="fas fa-envelope-square me-2 text-custom-secondary fs-3"></i>Email Address</h5>
+                            <p>Lima - lima@ medico.com
+                                <br />
+                                Cusco - cusco@ medico.com</p>
+                            <h5 className='text-custom-danger fw-bold'><i class="fas fa-phone-square-alt me-2 text-custom-secondary fs-3"></i>Call Center</h5>
+                            <p>Lima - 51 01 000 0000
+                                <br />
+                                Cusco -51 21 000 0000</p>
+                            <h5 className='text-custom-danger fw-bold'><i class="fas fa-clock  me-2 text-custom-secondary fs-3"></i>Our Schedule</h5>
+                            <p>Lima - Mon to Sat - 08 to 19
+                                <br />
+                                Cusco - Mon to Sat - 08 to 19</p>
                         </div>
                     </Col>
                 </Row>

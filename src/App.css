@@ -10,6 +10,13 @@
 .bg-custom-danger{
   background: rgb(255, 118, 152)
 }
+.top-banner{
+  background-image: linear-gradient( rgba(11, 54, 80, 0.479), rgba(0, 0, 0, 0.342)), url('./images/page-title.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 44vh;
+    opacity: 1;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
