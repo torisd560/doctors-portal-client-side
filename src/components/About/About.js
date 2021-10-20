@@ -79,7 +79,7 @@ const About = () => {
                     </Accordion>
                 </div>
             </div>
-            {/* -----------------middle section----------- */}
+            {/* -----------------last section----------- */}
             <div className="row container mx-auto my-5">
                 <div className="col-md-4 d-flex align-items-center">
                     <div className='bg-custom-danger p-3 me-4'>
