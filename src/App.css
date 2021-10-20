@@ -17,6 +17,11 @@
     height: 44vh;
     opacity: 1;
 }
+.about-banner{
+  background-image: url('./images/about-middle-banner.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
