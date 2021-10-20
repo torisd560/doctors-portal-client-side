@@ -7,10 +7,10 @@ const About = () => {
         <div>
             <Col className='top-banner text-white fw-bold px-5'>
                 <h1 >About Us</h1>
-                <p><i class="fas fa-map-marker-alt me-2"></i>Home / About</p>
+                <p><i className="fas fa-map-marker-alt me-2"></i>Home / About</p>
             </Col>
             {/*-------------------------- history section------------------------ */}
-            <div className="row my-5 p-5 text-secondary">
+            <div className="row my-5 p-5 text-secondary align-items-center">
                 <div className="col-sm-12 col-md-6">
                     <h2 className='text-custom-secondary fw-bold'>A Brief History</h2>
                     <div className='underline'></div>
@@ -27,7 +27,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className="col-sm-12 col-md-6">
-                    <img src={aboutBanner} alt="" />
+                    <img src={aboutBanner} alt="" className='img-fluid' />
                 </div>
             </div>
             {/* ---------------------------question section---------------------------------*/}
@@ -80,10 +80,10 @@ const About = () => {
                 </div>
             </div>
             {/* -----------------last section----------- */}
-            <div className="row container mx-auto my-5">
+            <div className="row mt-sm-5 container mx-auto my-5">
                 <div className="col-md-4 d-flex align-items-center">
                     <div className='bg-custom-danger p-3 me-4'>
-                        <i class="fas fa-user-md fs-1 text-white"></i>
+                        <i className="fas fa-user-md fs-1 text-white"></i>
                     </div>
                     <div>
                         <h2 className='text-custom-secondary fw-bold'>18</h2>
@@ -92,7 +92,7 @@ const About = () => {
                 </div>
                 <div className="col-md-4 d-flex align-items-center">
                     <div className='bg-custom-danger p-3 me-4'>
-                        <i class="fas fa-procedures fs-1 text-white"></i>
+                        <i className="fas fa-procedures fs-1 text-white"></i>
                     </div>
                     <div>
                         <h2 className='text-custom-secondary fw-bold'>12356</h2>
@@ -101,7 +101,7 @@ const About = () => {
                 </div>
                 <div className="col-md-4 d-flex align-items-center">
                     <div className='bg-custom-danger p-3 me-4'>
-                        <i class="fas fa-user-md fs-1 text-white"></i>
+                        <i className="fas fa-user-md fs-1 text-white"></i>
                     </div>
                     <div>
                         <h2 className='text-custom-secondary fw-bold'>73</h2>

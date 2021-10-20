@@ -3,7 +3,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import useAuth from '../hooks/useAuth';
-import logoImg from '../../images/logo.jpg'
+import logoImg from '../../images/logo.png'
 
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light" sticky="top" className='fw-bold'>
                 <Container>
                     <Navbar.Brand href="#home">
-                        <img src={logoImg} className = 'img-fuild w-25 h-50' alt="" />
+                        <img src={logoImg} style={{width: '100px'}} alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

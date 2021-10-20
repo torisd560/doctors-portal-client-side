@@ -24,6 +24,7 @@
   background-image: url('./images/about-middle-banner.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: 100vh;
 }
 .App-logo {
   height: 40vmin;

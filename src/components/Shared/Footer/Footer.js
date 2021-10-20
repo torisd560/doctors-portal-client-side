@@ -55,11 +55,11 @@ const Footer = () => {
                             <div className='underline-small'></div>
                             <div className='underline'></div>
                         </div>
-                        <h5><i class="fas fa-building  me-2 text-custom-danger fs-3"></i>Clinic Address</h5>
+                        <h5><i className="fas fa-building  me-2 text-custom-danger fs-3"></i>Clinic Address</h5>
                         <p>Tupac Amaru 200 - Lima</p>
-                        <h5><i class="fas fa-phone-square-alt me-2 text-custom-danger fs-3"></i>Call Center</h5>
+                        <h5><i className="fas fa-phone-square-alt me-2 text-custom-danger fs-3"></i>Call Center</h5>
                         <p>01 234567899</p>
-                        <h5><i class="fas fa-envelope-square me-2 text-custom-danger fs-3"></i>E-mail Address</h5>
+                        <h5><i className="fas fa-envelope-square me-2 text-custom-danger fs-3"></i>E-mail Address</h5>
                         <p>info@medicotheme.xyz</p>
                     </div>
                 </div>
