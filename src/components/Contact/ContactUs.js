@@ -12,7 +12,7 @@ const ContactUs = () => {
             </Col>
 
             <Container className='my-5 text-secondary'>
-                < Row >
+                < Row xs={1} md={3} >
                     <Col>
                         <h4 className='text-uppercase text-custom-secondary fw-bold'>Sent message here</h4>
                         <Form className='mt-4'>

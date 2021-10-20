@@ -48,7 +48,7 @@ const Footer = () => {
                         <br />
                         <Button className='bg-custom-danger border-0' >Subscribe</Button>
                     </div>
-                    <div className="col-md-3">
+                    <div className="col-md-3 ">
                         <h4>Get In Touch</h4>
                         <div className='d-flex align-items-center mb-4'>
                             <div className='underline'></div>
@@ -67,22 +67,22 @@ const Footer = () => {
             <hr className='bg-light' />
             {/* -------------footer last part --------------*/}
             <Container>
-            <div className=' bg-custom-secondary text-white d-flex justify-content-center align-items-center p-4'>
-                <div className=' col-md-3'>
+            <div className=' row bg-custom-secondary text-white d-flex justify-content-center align-items-center p-4'>
+                <div className='col-sm-12 col-md-3'>
                     <span>Copyright © 2021 by Medico </span>
                 </div>
-                <div className=' col-md-3 footer-icon'>
+                <div className='col-sm-12 col-md-3 footer-icon'>
                     <a href="/"><i className="fab fa-facebook-square fs-3 "></i></a>
                     <a href="/"><i className="fab fa-github-square fs-3  ms-3"></i></a>
                     <a href="/"><i className="fab fa-twitter-square fs-3  ms-3"></i></a>
                     <a href="/"><i className="fab fa-linkedin fs-3  ms-3"></i></a>
                 </div>
-                <div className=' col-md-3'>
+                <div className='col-sm-12 col-md-3'>
                     <span >Home</span>
                     <span className='ms-3'>About</span>
                     <span className='ms-3'>Contact Us</span>
                 </div>
-                <div className=' col-md-3'>
+                <div className='col-md-3'>
                     <Button className='bg-custom-danger border-0' ><i className="fas fa-chevron-up"></i></Button>
                 </div>
             </div>
