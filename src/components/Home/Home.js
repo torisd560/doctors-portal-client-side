@@ -1,27 +1,64 @@
 import React from 'react';
-import Banner from '../Banner/Banner'
-import middleBanner from '../../images/home-middle-part.jpg'
-import Services from '../Services/Services'
-import Doctors from '../Doctors/Doctors';
+import { Button, Carousel } from 'react-bootstrap';
+import slider1 from '../../images/slider1.jpg'
+import slider2 from '../../images/slider2.jpg'
+import slider3 from '../../images/slider3.jpg'
+import Tours from '../TourPlace/Tours';
+import Article from './Article/Article';
+import './Home.css'
+import Pricing from './Pricing/Pricing';
 
 const Home = () => {
     return (
         <div>
-            <Banner></Banner>
-            <Services></Services>
-            {/* ---------------------------- Our quality section-------------------------- */}
-            <div className="row my-5 py-4 px-2 justify-content-between align-items-center">
-                <div className="col-md-6">
-                    <img src={middleBanner} alt="" className='img-fluid' />
-                </div>
-                <div className="col-md-1"></div>
-                <div className="col-md-5">
-                    <h1 className='text-custom-secondary fw-bold'>Quality and confidentiality</h1>
-                    <div className="underline "></div>
-                    <p className='mt-4 lh-lg text-secondary'>A gynecologist is a doctor specializing in the female reproductive organs. The American College of Obstetricians and Gynecologists recommends that young women make their first visit for reproductive health between the ages of 13 and 15. Women may visit yearly, or as needed, after that.Physicians for Women is a Women's Health Connecticut practice with ... I just can't say enough about the quality of care I received from Dr. LaMonica!Physicians for Women is a Women's Health Connecticut practice with I just can't say enough about the quality of care I received from Dr.</p>
-                </div>
+            <Carousel fade className='text-uppercase fw-bold mb-5'>
+                <Carousel.Item>
+                    <img
+                        className="d-block img-fluid w-100"
+                        src={slider1}
+                        alt="First slide"
+                    />
+                    <Carousel.Caption>
+                        <h4 className='custom-text-warning'>Welcome to Travenu</h4>
+                        <h1>Best Way To Find Your
+                            <br /> Dream Place</h1>
+                        <Button className='custom-btn'>Discover Now</Button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block img-fluid w-100"
+                        src={slider2}
+                        alt="Second slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h4 className='custom-text-warning'>Welcome to Travenu</h4>
+                        <h1>Best Way To Find Your
+                            <br /> Dream Place</h1>
+                        <Button className='custom-btn'>Discover Now</Button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+                <Carousel.Item>
+                    <img
+                        className="d-block img-fluid w-100"
+                        src={slider3}
+                        alt="Third slide"
+                    />
+
+                    <Carousel.Caption>
+                        <h4 className='custom-text-warning'>Welcome to Travenu</h4>
+                        <h1>Best Way To Find Your
+                            <br /> Dream Place</h1>
+                        <Button className='custom-btn'>Discover Now</Button>
+                    </Carousel.Caption>
+                </Carousel.Item>
+            </Carousel>
+            <div>
+                <Tours></Tours>
+                <Article></Article>
+                <Pricing></Pricing>
             </div>
-            <Doctors></Doctors>
         </div>
     );
 };

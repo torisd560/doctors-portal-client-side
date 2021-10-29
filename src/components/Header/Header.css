@@ -1,0 +1,10 @@
+.custom-nav a{
+    margin-right: 20px;
+}
+.custom-login-btn{
+    background-color: #FF9C34;
+    border: 0;
+}
+.custom-login-btn:hover{
+    background-color: rgb(243, 69, 26);;
+}

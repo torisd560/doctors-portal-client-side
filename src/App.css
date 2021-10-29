@@ -1,31 +1,35 @@
 .App {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
-.text-custom-secondary{
-  color: rgb(11, 15, 77);
+.custom-text-warning{
+  color: #FF9C34;
 }
-.bg-custom-secondary{
-  background-color: #203646
+.custom-text-primary{
+  color: #152B5A;
 }
-.text-custom-danger{
-  color: rgb(255, 118, 152);
+.custom-btn{
+  background-color: #FF9C34;
+  border: 0;
+  border-radius: 50px;
+  padding: 10px 20px;
 }
-.bg-custom-danger{
-  background: rgb(255, 118, 152)
+.custom-btn:hover{
+  background-color: rgb(243, 69, 26);
 }
-.top-banner{
-  background-image: linear-gradient( rgba(11, 54, 80, 0.479), rgba(0, 0, 0, 0.342)), url('./images/page-title.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 44vh;
-    opacity: 1;
+.underline{
+  width: 30px;
+  height: 4px;
+  background:#FF9C34 ;
 }
-.about-banner{
-  background-image: url('./images/about-middle-banner.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 100vh;
+.underline-small{
+  width: 30px;
+  height: 6px;
+  background: #FF9C34;
+ 
+  
 }
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
