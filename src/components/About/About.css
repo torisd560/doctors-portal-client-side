@@ -1,0 +1,8 @@
+.page-top-banner {
+    background-image: linear-gradient( rgba(11, 54, 80, 0.479), rgba(0, 0, 0, 0.342)),url('../../images/pageTitle.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 44vh;
+    opacity: 1;
+    
+}
