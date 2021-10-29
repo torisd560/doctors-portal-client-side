@@ -4,5 +4,7 @@
     background-size: cover;
     height: 44vh;
     opacity: 1;
-    
+}
+.travel-container{
+    margin: 150px 0px;
 }
