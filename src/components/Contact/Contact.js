@@ -34,13 +34,13 @@ const Contact = () => {
                         < Row xs={1} md={2}  className = 'mt-5'>
                             <Col>
                             <h5 className = 'custom-text-primary mb-4'>Ubud, Bali</h5>
-                            <p><i class="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154874</p>
+                            <p><i className="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154874</p>
                             <p><i className="fas fa-envelope me-2 custom-text-warning"></i>contact@domain.com</p>
                             <p><i className="fas fa-map-marker-alt me-2 custom-text-warning"></i>Jl. Raya Ubud No.88, Bali 80571</p>
                            </Col>
                             <Col>
                             <h5 className = 'custom-text-primary mb-4'>Denpasar, Bali</h5>
-                            <p><i class="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154875</p>
+                            <p><i className="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154875</p>
                             <p><i className="fas fa-envelope me-2 custom-text-warning"></i>contact@domain.com</p>
                             <p><i className="fas fa-map-marker-alt me-2 custom-text-warning"></i>Jl. Raya Ubud No.88, Bali 80571</p>
                            </Col>
@@ -48,13 +48,13 @@ const Contact = () => {
                         < Row xs={1} md={2}  className = 'mt-5'>
                             <Col>
                             <h5 className = 'custom-text-primary mb-4'>Kuta, Bali</h5>
-                            <p><i class="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154876</p>
+                            <p><i className="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154876</p>
                             <p><i className="fas fa-envelope me-2 custom-text-warning"></i>contact@domain.com</p>
                             <p><i className="fas fa-map-marker-alt me-2 custom-text-warning"></i>Jl. Raya Ubud No.88, Bali 80571</p>
                            </Col>
                             <Col>
                             <h5 className = 'custom-text-primary mb-4'>Tabanan, Bali</h5>
-                            <p><i class="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154877</p>
+                            <p><i className="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154877</p>
                             <p><i className="fas fa-envelope me-2 custom-text-warning"></i>contact@domain.com</p>
                             <p><i className="fas fa-map-marker-alt me-2 custom-text-warning"></i>Jl. Raya Ubud No.88, Bali 80571</p>
                            </Col>

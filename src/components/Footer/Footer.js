@@ -20,14 +20,14 @@ const Footer = () => {
                     </div>
                     <div className="col-md-4">
                         <h4 className = 'custom-text-warning mb-4'>Contact Info</h4>
-                        <p><i class="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154875</p>
+                        <p><i className="fas fa-phone-alt custom-text-warning me-2"></i>(+62) 361 154875</p>
                         <p><i className="fas fa-envelope me-2 custom-text-warning"></i>contact@domain.com</p>
                         <p><i className="fas fa-map-marker-alt me-2 custom-text-warning"></i>Jl. Raya Ubud No.88, Bali 80571</p>
                     </div>
                     <div className="col-md-4">
                         <h4 className = 'custom-text-warning mb-4'>Make a Reservation</h4>
                         <p>Our Support and Sales team is available 24 /7 to answer your queries</p>
-                        <Button className = 'custom-btn'><i class="fas fa-phone-alt text-white me-2"></i>(+62) 361 154875</Button>
+                        <Button className = 'custom-btn'><i className="fas fa-phone-alt text-white me-2"></i>(+62) 361 154875</Button>
                     </div>
 
                 </div>

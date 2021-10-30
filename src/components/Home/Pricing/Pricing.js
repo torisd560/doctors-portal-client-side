@@ -17,7 +17,7 @@ const Pricing = () => {
                             <p className='mt-4'>the business of attracting accommodating business of operating tours</p>
                             <p className='mt-4'>The World Tourism Organization defines tourism more generally.</p>
                         </div>
-                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i class="fas fa-long-arrow-alt-right ms-3"></i></Button>
+                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i className="fas fa-long-arrow-alt-right ms-3"></i></Button>
 
                     </div>
                     <div className="col-md-4 border border-1 border-secondary p-5 ms-4">
@@ -29,7 +29,7 @@ const Pricing = () => {
                             <p className='mt-4'>the business of attracting accommodating business of operating tours</p>
                             <p className='mt-4'>The World Tourism Organization defines tourism more generally.</p>
                         </div>
-                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i class="fas fa-long-arrow-alt-right ms-3"></i></Button>
+                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i className="fas fa-long-arrow-alt-right ms-3"></i></Button>
                     </div>
                     <div className="col-md-4 border border-1 border-secondary p-5 ms-4">
                         <h3 className='custom-text-primary'>DELUXE</h3>
@@ -40,7 +40,7 @@ const Pricing = () => {
                             <p className='mt-4'>the business of attracting accommodating business of operating tours</p>
                             <p className='mt-4'>The World Tourism Organization defines tourism more generally.</p>
                         </div>
-                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i class="fas fa-long-arrow-alt-right ms-3"></i></Button>
+                        <Button variant=" outline-secondary" className='custom-text-warning'>VIEW MORE<i className="fas fa-long-arrow-alt-right ms-3"></i></Button>
 
                     </div>
                 </div>

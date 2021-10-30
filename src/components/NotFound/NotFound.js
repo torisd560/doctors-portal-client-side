@@ -7,7 +7,7 @@ const NotFound = () => {
         <div className = 'text-center'>
             <img src={NotFoundImg} alt="" />
             <br />
-            <Button className='custom-btn rounded-0 my-4'>Back To Home<i class="fas fa-long-arrow-alt-right ms-3"></i></Button>
+            <Button className='custom-btn rounded-0 my-4'>Back To Home<i className="fas fa-long-arrow-alt-right ms-3"></i></Button>
         </div>
     );
 };
