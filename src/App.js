@@ -8,10 +8,12 @@ import Login from './Components/Login/Login'
 import MyOrders from './Components/MyOrders/MyOrders'
 import ManageOrder from './Components/ManageOrders/ManageOrder'
 import NotFound from './Components/NotFound/NotFound'
-
-import './App.css';
 import Footer from './Components/Footer/Footer';
 import AddService from './Components/Add Service/AddService';
+import Booking from './Components/Booking/Booking';
+import './App.css';
+import Register from './Components/Register/Register';
+
 
 function App() {
   return (
@@ -25,6 +27,9 @@ function App() {
           <Route path='/home'>
             <Home></Home>
           </Route>
+          <Route path='/booking'>
+            <Booking></Booking>
+          </Route>
           <Route path='/about'>
             <About></About>
           </Route>
@@ -33,6 +38,9 @@ function App() {
           </Route>
           <Route path='/login'>
             <Login></Login>
+          </Route>
+          <Route path='/register'>
+            <Register></Register>
           </Route>
           <Route path='/manageOrders'>
             <ManageOrder></ManageOrder>

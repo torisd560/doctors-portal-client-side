@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button'
 
 const MyOrders = () => {
     return (
-        <div>
+        <div className = 'my-5 '>
             <h2 className = 'my-5 text-center'>My Orders</h2>
             <Table responsive="sm">
                 <thead>

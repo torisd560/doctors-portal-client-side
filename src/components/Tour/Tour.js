@@ -1,5 +1,6 @@
 import React from 'react';
 import { Button, Card, Col } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const Tour = (props) => {
   const { title, description, img, price } = props.tour
@@ -13,7 +14,9 @@ const Tour = (props) => {
           <Card.Text>
             {description.slice(0, 120)}
           </Card.Text>
-          <Button className='custom-btn text-uppercase'>Book Now</Button>
+          <Link to='/booking'>
+            <Button className='custom-btn text-uppercase'>Book Now</Button>
+          </Link>
         </Card.Body>
       </Card>
     </Col>
