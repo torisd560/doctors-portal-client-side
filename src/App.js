@@ -13,50 +13,54 @@ import AddService from './Components/Add Service/AddService';
 import Booking from './Components/Booking/Booking';
 import './App.css';
 import Register from './Components/Register/Register';
+import AuthProvider from './Context/AuthProvider';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 
 function App() {
   return (
     <div className='App'>
-      <Router>
-        <Header></Header>
-        <Switch>
-          <Route exact path='/'>
-            <Home></Home>
-          </Route>
-          <Route path='/home'>
-            <Home></Home>
-          </Route>
-          <Route path='/booking'>
-            <Booking></Booking>
-          </Route>
-          <Route path='/about'>
-            <About></About>
-          </Route>
-          <Route path='/contact'>
-            <Contact></Contact>
-          </Route>
-          <Route path='/login'>
-            <Login></Login>
-          </Route>
-          <Route path='/register'>
-            <Register></Register>
-          </Route>
-          <Route path='/manageOrders'>
-            <ManageOrder></ManageOrder>
-          </Route>
-          <Route path='/myOrders'>
-            <MyOrders></MyOrders>
-          </Route>
-          <Route path='/addService'>
-           <AddService></AddService>
-          </Route>
-          <Route path='*'>
-            <NotFound></NotFound>
-          </Route>
-        </Switch>
-        <Footer></Footer>
-      </Router>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path='/'>
+              <Home></Home>
+            </Route>
+            <Route path='/home'>
+              <Home></Home>
+            </Route>
+            <PrivateRoute path='/booking'>
+              <Booking></Booking>
+            </PrivateRoute>
+            <Route path='/about'>
+              <About></About>
+            </Route>
+            <Route path='/contact'>
+              <Contact></Contact>
+            </Route>
+            <Route path='/login'>
+              <Login></Login>
+            </Route>
+            <Route path='/register'>
+              <Register></Register>
+            </Route>
+            <Route path='/manageOrders'>
+              <ManageOrder></ManageOrder>
+            </Route>
+            <Route path='/myOrders'>
+              <MyOrders></MyOrders>
+            </Route>
+            <Route path='/addService'>
+              <AddService></AddService>
+            </Route>
+            <Route path='*'>
+              <NotFound></NotFound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

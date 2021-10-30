@@ -5,34 +5,22 @@ import Button from 'react-bootstrap/Button'
 const MyOrders = () => {
     return (
         <div className = 'my-5 '>
-            <h2 className = 'my-5 text-center'>My Orders</h2>
+            <h2 className = 'my-5 text-center fw-bold custom-text-primary'>My Booking Orders</h2>
             <Table responsive="sm">
                 <thead>
                     <tr>
                         <th>#</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Orders</th>
-                        <th>Cancel Orders</th>
+                        <th>Booking</th>
+                        <th>Status</th>
+                        <th>Cancel Booking</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>1</td>
                         <td>Table cell</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                        <td><Button variant="danger">Cancel</Button></td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                        <td>Table cell</td>
-                        <td><Button variant="danger">Cancel</Button></td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
                         <td>Table cell</td>
                         <td>Table cell</td>
                         <td>Table cell</td>

@@ -1,5 +1,5 @@
 import initializeFirebaseAuthentication from '../firebase/firebase.init'
-import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile} from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, onAuthStateChanged, signOut, createUserWithEmailAndPassword, sendPasswordResetEmail, updateProfile } from "firebase/auth";
 import { useEffect, useState } from 'react';
 
 initializeFirebaseAuthentication()
@@ -14,7 +14,8 @@ const useFirebase = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
     const [name, setName] = useState('')
-    
+    const [isLoading, setIsLoading] = useState(true)
+
 
     //==========get email , password, Name========
     const handleEmail = e => setEmail(e.target.value)
@@ -41,7 +42,7 @@ const useFirebase = () => {
     //==========handleSignup=========================
     const handleSignUp = e => {
         e.preventDefault()
-        
+
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 setUser(result.user)
@@ -56,11 +57,11 @@ const useFirebase = () => {
     }
     // ==============Google Sign In function===============
     const handleGoogleSignIn = () => {
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                setUser(result.user)
-            })
+        setIsLoading(true)
+        return signInWithPopup(auth, googleProvider)
+
             .catch(error => setError(error.message))
+            .finally(() => setIsLoading(false))
     }
     // ===============OnAuth stateChange function=============
     useEffect(() => {
@@ -71,6 +72,7 @@ const useFirebase = () => {
             else {
                 setUser({})
             }
+            setIsLoading(false)
         })
         return () => unsubcribed;
     }, [])
@@ -82,7 +84,7 @@ const useFirebase = () => {
                 setUser({})
             })
             .catch(error => setError(error.message))
-        // .finally(()=>setIsLoading(false))
+            .finally(() => setIsLoading(false))
     }
     // ==============reset password================
     const resetPassword = () => {
@@ -103,7 +105,8 @@ const useFirebase = () => {
         logOut,
         resetPassword,
         user,
-        error
+        error,
+        isLoading
     }
 };
 

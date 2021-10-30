@@ -1,9 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import useFirebase from '../../hooks/useFirebase';
+import useAuth from '../../hooks/useAuth';
+
 
 const Register = () => {
-    const { handleUserName, handleEmail, handlePassword,  handleSignUp ,error} = useFirebase()
+    const { handleUserName, handleEmail, handlePassword,  handleSignUp ,error} = useAuth()
     return (
         <div className='w-50 mx-auto'>
         <form onSubmit = {handleSignUp} >
