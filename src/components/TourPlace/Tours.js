@@ -5,7 +5,7 @@ import Tour from '../Tour/Tour';
 const Tours = () => {
     const [tours, setTours] = useState([])
     useEffect(() => {
-        fetch('volunter.json')
+        fetch('https://whispering-dusk-80653.herokuapp.com/TourService')
             .then(res => res.json())
             .then(data => setTours(data))
     }, [])

@@ -38,7 +38,7 @@ const Login = () => {
                         <p onClick={resetPassword} className='custom-cursor-style text-primary'> Forgot Password ? </p>
                         <button type="submit" className="btn custom-bg text-white me-3 px-4 mt-2">Login</button>
                         <Button onClick={handleGoogleLogin} variant="warning" className='me-3 mt-2'><i className="fab fa-google text-white fs-5 px-4 "></i></Button>
-                        <Link to='/register'> <p className='custom-cursor-style text-primary mt-4'>Create an  new account?</p></Link>
+                        <p className=' mt-4'>Don't have an account?<Link to='/register'> Sign Up</Link></p>
                         <p className='text-danger fw-bold mt-4'>{error}</p>
                     </div>
 
