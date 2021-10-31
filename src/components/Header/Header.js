@@ -25,12 +25,12 @@ const Header = () => {
               <Nav.Link as={Link} to="/myOrders">MyOrders</Nav.Link>
               <Nav.Link as={Link} to="/manageOrders">All Orders</Nav.Link>
               <Nav.Link as={Link} to="/addService">Add Service</Nav.Link>
-              <span className='custom-text-primary me-3 fw-bold'><i class="fas fa-user me-2"></i>{user?.displayName}</span>
-              <Button onClick={logOut} className=' px-2 text-white custom-login-btn'><i class="fas fa-sign-out-alt me-1"></i>LogOut</Button>
+              <span className='custom-text-primary me-3 fw-bold'><i className="fas fa-user me-2"></i>{user?.displayName}</span>
+              <Button onClick={logOut} className=' px-2 text-white custom-login-btn'><i className="fas fa-sign-out-alt me-1"></i>LogOut</Button>
             </>
               :
               <Nav.Link as={Link} to="/Login">
-                <Button className=' px-2 text-white custom-login-btn '> <i class="fas fa-sign-in-alt me-1"></i>Login</Button>
+                <Button className=' px-2 text-white custom-login-btn '> <i className="fas fa-sign-in-alt me-1"></i>Login</Button>
               </Nav.Link>}
 
           </Nav>

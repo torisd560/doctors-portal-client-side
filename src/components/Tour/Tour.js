@@ -15,7 +15,7 @@ const Tour = (props) => {
             {description.slice(0, 120)}
           </Card.Text>
           <Link to={`/TourService/booking/${_id}`}>
-            <Button className='custom-btn text-uppercase'><i class="fas fa-suitcase-rolling me-2 "></i>Book Now</Button>
+            <Button className='custom-btn text-uppercase'><i className="fas fa-suitcase-rolling me-2 "></i>Book Now</Button>
           </Link>
         </Card.Body>
       </Card>

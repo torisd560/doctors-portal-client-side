@@ -33,21 +33,20 @@ const MyOrders = () => {
 
     }
 
-    //============update===============
-    const hanldeUpdate = id => {
-        console.log('djfkdfhjhgjfgh')
-        fetch(`https://whispering-dusk-80653.herokuapp.com/TourService/booking/${id}`, {
-            method: 'PUT',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body : JSON.stringify(orders)
-        })
-        .then(res => res.json())
-        .then(data =>{
-           setOrders( data.status = "Aprove")
-        })
-    }
+    // //============update===============
+    // const hanldeUpdate = id => {
+    //     fetch(`http://localhost:5000/TourService/booking/${id}`, {
+    //         method: 'PUT',
+    //         headers: {
+    //             'content-type': 'application/json'
+    //         },
+    //         body : JSON.stringify(orders)
+    //     })
+    //     .then(res => res.json())
+    //     .then(data =>{
+    //        setOrders( data.status = "Aprove")
+    //     })
+    // }
 
 
     return (
@@ -72,9 +71,9 @@ const MyOrders = () => {
                                 <td>{order?.name}</td>
                                 <td>{order?.email}</td>
                                 <td>{order?.Country}</td>
-                                <td><Button onClick={() => handleDelete(order._id)} variant="danger"><i class="far fa-window-close me-2"></i>Cancel</Button></td>
+                                <td><Button onClick={() => handleDelete(order._id)} variant="danger"><i className="far fa-window-close me-2"></i>Cancel</Button></td>
                                 <td><Badge bg="warning" text="dark" className="p-2">{order.status}</Badge>
-                                    <Button variant = "outline-light"><i onClick = {()=>hanldeUpdate(order._id)} class="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></Button></td>
+                                    <Button variant = "outline-light"><i className="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></Button></td>
                             </tr>
                         )
 
