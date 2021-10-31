@@ -17,9 +17,10 @@ const ManageOrder = () => {
         .then(res =>res.json())
         .then(data =>{
                 if(data.acknowledged){
-                    const restBooking = orders.filter(order=> order._id === id)
-                    setOrders(restBooking)
                     alert('Delete Booking Successfully')
+                    const restBooking = orders.filter(order=> order._id !== id)
+                    setOrders(restBooking)
+                    
                 }
         })
     }

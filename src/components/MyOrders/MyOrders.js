@@ -27,10 +27,11 @@ const MyOrders = () => {
             })
         }
         
+        const myOrders = orders.filter(order=> order?.email === user?.email)
     
         return (
             <div className = 'my-5'>
-                <h2 className = 'my-5 text-center fw-bold custom-text-primary'>Manage All Booking Orders</h2>
+                <h2 className = 'my-5 text-center fw-bold custom-text-primary'>Manage My Booking Orders</h2>
                 <Table responsive="sm" >
                     <thead >
                         <tr>
@@ -44,7 +45,7 @@ const MyOrders = () => {
                     </thead>
                     <tbody>
                         {
-                           orders.map(order => order.email === user.email &&
+                           myOrders.map(order =>
                             <tr>
                             <td>{order._id}</td>
                             <td>{order?.name}</td>
