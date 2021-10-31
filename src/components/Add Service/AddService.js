@@ -5,17 +5,23 @@ import './AddService.css'
 const AddService = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/TourService', {
+        fetch('https://whispering-dusk-80653.herokuapp.com/TourService', {
             method: "POST",
             headers: {
                 "content-type": "application/json"
             },
             body: JSON.stringify(data)
         })
+        .then(res => res.json())
+        .then(results =>{
+            if(results.acknowledged){
+                alert('Added Succesfully')
+            }
+        })
         reset()
     }
     return (
-        <div className='border border-1 border-secondary w-50  mx-auto my-5 p-5'>
+        <div className=' mx-auto m-5 p-5'>
             <h2 className='text-center mb-5'>Add a new service</h2>
             <form onSubmit={handleSubmit(onSubmit)} className='service-field'>
                 <input type="text" {...register("title")} placeholder='Country Name' />

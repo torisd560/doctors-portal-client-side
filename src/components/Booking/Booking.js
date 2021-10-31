@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Card, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useForm } from "react-hook-form";
 import { useParams } from 'react-router-dom';
 import './Booking.css'
 
 const Booking = () => {
   const [service, setService] = useState({})
-  const { register, handleSubmit,reset } = useForm();
+  const { register, handleSubmit, reset } = useForm();
   const { id } = useParams()
   const onSubmit = data => {
-    fetch('http://localhost:5000/TourService/booking', {
+    fetch('https://whispering-dusk-80653.herokuapp.com/TourService/booking', {
       method: 'POST',
       headers: {
         'content-type': "application/json"
@@ -17,15 +17,15 @@ const Booking = () => {
       body: JSON.stringify(data)
     })
       .then(res => res.json())
-      .then(data =>{
-        if(data.insertedId){
+      .then(data => {
+        if (data.insertedId) {
           alert('Booking Succesfull')
         }
       })
-      reset()
+    reset()
   };
 
- useEffect(() => {
+  useEffect(() => {
     fetch(`https://whispering-dusk-80653.herokuapp.com/TourService/booking/${id}`)
       .then(res => res.json())
       .then(data => setService(data))
@@ -51,7 +51,7 @@ const Booking = () => {
         <Col>
           <div className='shadow-lg p-3'>
             <form onSubmit={handleSubmit(onSubmit)} className='booking-field h-75'>
-              <select {...register("Country")} className = 'custom-text-primary fw-bold fs-4'>
+              <select {...register("Country")} className='custom-text-primary fw-bold fs-4'>
                 <option  >{service.title}</option>
               </select>
               <input type="text" {...register("name",)} placeholder='Name' requred />
