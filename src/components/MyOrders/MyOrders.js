@@ -8,12 +8,13 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     const [orders, setOrders] = useState([])
+    const myOrders = orders.filter(order => order?.email === user?.email)
     useEffect(() => {
         fetch('https://whispering-dusk-80653.herokuapp.com/TourService/booking')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
-
+    //======================delete===================
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
         if (proceed) {
@@ -32,7 +33,22 @@ const MyOrders = () => {
 
     }
 
-    const myOrders = orders.filter(order => order?.email === user?.email)
+    //============update===============
+    const hanldeUpdate = id => {
+        console.log('djfkdfhjhgjfgh')
+        fetch(`https://whispering-dusk-80653.herokuapp.com/TourService/booking/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body : JSON.stringify(orders)
+        })
+        .then(res => res.json())
+        .then(data =>{
+           setOrders( data.status = "Aprove")
+        })
+    }
+
 
     return (
         <div className='my-5'>
@@ -57,8 +73,8 @@ const MyOrders = () => {
                                 <td>{order?.email}</td>
                                 <td>{order?.Country}</td>
                                 <td><Button onClick={() => handleDelete(order._id)} variant="danger"><i class="far fa-window-close me-2"></i>Cancel</Button></td>
-                                <td><Badge bg="warning" text="dark" className = "p-2">{order.status}</Badge>
-                            <i class="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></td>
+                                <td><Badge bg="warning" text="dark" className="p-2">{order.status}</Badge>
+                                    <Button variant = "outline-light"><i onClick = {()=>hanldeUpdate(order._id)} class="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></Button></td>
                             </tr>
                         )
 
