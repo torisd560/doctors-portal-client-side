@@ -60,7 +60,7 @@ const Booking = () => {
               <input type="date" {...register("date")} placeholder='Date' requred />
               <input type="number" {...register("number")} placeholder='Tickets Number' requred />
               <input type="number" {...register("number")} placeholder='Price' requred />
-              <input type="text" {...register("status")} placeholder='Pending..........' requred />
+              <input defaultValue = "Pending....." {...register("status")}  requred />
               <input type="submit" className='custom-btn rounded-0 text-uppercase text-white mt-3' />
             </form>
           </div>

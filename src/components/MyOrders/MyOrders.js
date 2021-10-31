@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
+import Badge from 'react-bootstrap/Badge'
 import useAuth from '../../hooks/useAuth'
 
 const MyOrders = () => {
@@ -42,7 +43,7 @@ const MyOrders = () => {
                         <th>id</th>
                         <th>Name</th>
                         <th>Email</th>
-                        <th>Booking</th>
+                        <th>Country</th>
                         <th>Cancel booking</th>
                         <th>Status</th>
                     </tr>
@@ -55,8 +56,9 @@ const MyOrders = () => {
                                 <td>{order?.name}</td>
                                 <td>{order?.email}</td>
                                 <td>{order?.Country}</td>
-                                <td><Button onClick={() => handleDelete(order._id)} variant="danger">Cancel</Button></td>
-                                <td>{order.status}</td>
+                                <td><Button onClick={() => handleDelete(order._id)} variant="danger"><i class="far fa-window-close me-2"></i>Cancel</Button></td>
+                                <td><Badge bg="warning" text="dark" className = "p-2">{order.status}</Badge>
+                            <i class="fas fa-check-circle m-2 fs-5 custom-text-primary"></i></td>
                             </tr>
                         )
 
