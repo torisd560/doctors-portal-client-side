@@ -10,7 +10,7 @@ const Tour = (props) => {
         <Card.Img variant="top" src={img} className='img-fluid' />
         <Card.Body>
           <Card.Title className='text-uppercase fw-bold custom-text-primary'>{title}</Card.Title>
-          <p>{price}</p>
+          <p>{price} / person</p>
           <Card.Text>
             {description.slice(0, 120)}
           </Card.Text>
