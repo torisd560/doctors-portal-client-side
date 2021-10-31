@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Table } from 'react-bootstrap';
+import { Spinner, Table } from 'react-bootstrap';
 import Button from 'react-bootstrap/Button'
 import Badge from 'react-bootstrap/Badge'
 import useAuth from '../../hooks/useAuth'
@@ -7,13 +7,17 @@ import useAuth from '../../hooks/useAuth'
 const ManageOrder = () => {
     const [orders, setOrders] = useState([])
 
-    const {isLoding} = useAuth()
+    const {isLoading} = useAuth()
 
     useEffect(() => {
         fetch('https://whispering-dusk-80653.herokuapp.com/TourService/booking')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [])
+
+    if(isLoading) {
+        return <div className = 'text-center my-5'><Spinner animation="border" variant="warning" /></div>
+    } 
 
     const handleDelete = id => {
         const proceed = window.confirm('Are you sure, you want to delete?');
@@ -37,7 +41,7 @@ const ManageOrder = () => {
     }
     const hanldeUpdate = id => {
         console.log(id)
-        fetch(`http://localhost:5000/TourService/booking/${id}`, {
+        fetch(`https://whispering-dusk-80653.herokuapp.com/TourService/booking/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
