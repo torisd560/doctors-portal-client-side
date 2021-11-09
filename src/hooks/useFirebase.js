@@ -9,7 +9,7 @@ const useFirebase = () => {
     const [error, setError] = useState("")
     const [isLoading, setIsLoading] = useState(true)
     const [admin, setAdmin] = useState(false)
-    const [token , setToken] = useState('')
+    const [token, setToken] = useState('')
 
     const auth = getAuth()
     const googleprovider = new GoogleAuthProvider();
@@ -17,11 +17,11 @@ const useFirebase = () => {
     // google sign in method
     const signInWithGoogle = (location, history) => {
         setIsLoading(true)
-      
+
         signInWithPopup(auth, googleprovider)
             .then((result) => {
                 const user = result.user
-                saveUser( user.email, user.displayName, 'PUT')
+                saveUser(user.email, user.displayName, 'PUT')
                 const destination = location?.state?.from || '/'
                 history.push(destination)
                 setError("")
@@ -40,12 +40,12 @@ const useFirebase = () => {
                 setUser(newUser)
 
                 // save user to database
-                saveUser(email, name , 'POST')
+                saveUser(email, name, 'POST')
 
                 updateProfile(auth.currentUser, {
                     displayName: name
                 })
-                    .then(() =>{} )
+                    .then(() => { })
                     .catch((error) => setError(error.message));
                 history.replace('/')
                 setError("")
@@ -75,14 +75,14 @@ const useFirebase = () => {
             if (user) {
                 setUser(user)
                 getIdToken(user)
-                .then(idToken => setToken(idToken))
+                    .then(idToken => setToken(idToken))
             } else {
                 setUser({})
             }
             setIsLoading(false)
         });
         return () => unsubscribed;
-    }, [])
+    }, [auth])
 
     // LogOut method 
     const logOut = () => {
@@ -94,23 +94,23 @@ const useFirebase = () => {
             .finally(() => setIsLoading(false))
     }
     // save user to database 
-    const saveUser = (email , displayName , method) => {
-        const user = {email, displayName}
-        fetch(`http://localhost:5000/users`,{
-            method : method,
-            headers :{
-                'content-type' : 'application/json'
+    const saveUser = (email, displayName, method) => {
+        const user = { email, displayName }
+        fetch(`http://localhost:5000/users`, {
+            method: method,
+            headers: {
+                'content-type': 'application/json'
             },
-            body : JSON.stringify(user)
+            body: JSON.stringify(user)
         })
-        .then()
+            .then()
     }
 
-     // get data for admin user
-     useEffect(() =>{
+    // get data for admin user
+    useEffect(() => {
         fetch(`http://localhost:5000/users/${user.email}`)
-        .then(res => res.json())
-        .then(data => setAdmin(data.admin))
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
     }, [user.email])
 
 

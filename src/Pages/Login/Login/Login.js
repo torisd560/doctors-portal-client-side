@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Container, Grid, TextField, Typography, Alert, CircularProgress } from '@mui/material';
+import { Button, Container, Grid, TextField, Typography, Alert } from '@mui/material';
 import loginImage from '../../../images/login.png'
 import { NavLink, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
@@ -62,7 +62,7 @@ const Login = () => {
                         {user.email && <Alert severity="success" sx={{ mx: 8 }}>Congralutations! Your are login succesfully</Alert>}
                         {error && <Alert severity="error" sx={{ mx: 8 }}>{error}</Alert>}
                     </form>
-                    <Button onClick = {handleGoogleSignIn} variant = "contained">Google SignIn</Button>
+                    <Button onClick={handleGoogleSignIn} variant="contained">Google SignIn</Button>
                 </Grid>
                 <Grid item xs={12} md={6}>
                     <img src={loginImage} alt="" style={{ width: '500px' }} />

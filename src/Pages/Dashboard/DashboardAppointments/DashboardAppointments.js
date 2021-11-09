@@ -23,7 +23,7 @@ const DashboardAppointments = ({ date }) => {
         })
             .then(res => res.json())
             .then(data => setAppointments(data))
-    }, [date])
+    }, [date, user.email, token])
 
     return (
         <div>
