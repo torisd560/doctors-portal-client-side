@@ -21,10 +21,10 @@ const style = {
 };
 
 const BookingModal = ({ handleModalClose, openModal, booking, date, setBookingSuccess }) => {
-    const { name, time } = booking
+    const { name, time, price } = booking
     const { user } = useAuth()
 
-    const initialInfo = { patientName: user.displayName, email: user.email, phone: '' }
+    const initialInfo = { patientName: user.displayName, email: user.email, price: price, phone: '' }
     const [bookingInfo, setBookingInfo] = useState(initialInfo)
 
     const handleOnBlur = e => {
@@ -112,6 +112,14 @@ const BookingModal = ({ handleModalClose, openModal, booking, date, setBookingSu
                             sx={{ width: '90%', m: 1 }}
                             id="outlined-size-small"
                             defaultValue={date.toLocaleDateString()}
+                            size="small"
+                        />
+                        <TextField
+                            sx={{ width: '90%', m: 1 }}
+                            onBlur={handleOnBlur}
+                            id="outlined-size-small"
+                            name="price"
+                            defaultValue={price}
                             size="small"
                         />
                         <Button type="submit" variant="contained" sx={{ backgroundColor: 'rgb(26, 198, 266)', color: 'rgb(242, 242, 242)', padding: '5px 20px', m: 1 }}>SUBMIT</Button>
