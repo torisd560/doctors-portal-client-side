@@ -1,0 +1,7 @@
+.banner-img:hover {
+    transform: rotate(5deg);
+    transition: transform 5s;
+}
+.article-container{
+    margin:100px 0px;
+}

@@ -1,0 +1,10 @@
+.custom-bg{
+background-color: #152B5A;
+color: #BBCAEA;
+}
+.footer-icon a{
+    color: inherit
+}
+.footer-icon a:hover{
+    color:#FF9C34;;
+}
