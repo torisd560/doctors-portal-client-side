@@ -26,7 +26,7 @@ const AddService = () => {
             <form onSubmit={handleSubmit(onSubmit)} className='service-field'>
                 <input type="text" {...register("title")} placeholder='Country Name' />
                 <input type="text" {...register("description")} placeholder='Description' />
-                <input type="number" {...register("price")} placeholder='Price' />
+                <input type="number" {...register("price", { min:0 })} placeholder='Price' />
                 <input type="url" {...register("img")} placeholder='Image-URL' />
                 <input type="submit" className='custom-btn rounded-0 text-white text-uppercase' />
             </form>

@@ -41,7 +41,7 @@ const MyOrders = () => {
 
     return (
         <div className='my-5'>
-            <h2><span className = 'custom-text-primary fw-bold my-5'>{user.displayName}</span></h2>
+            <h4 className = 'text-center my-5 '><span className = 'custom-text-primary fw-bold'>{user.displayName} ' Orders</span></h4>
 
             <Table responsive="sm" >
                 <thead >

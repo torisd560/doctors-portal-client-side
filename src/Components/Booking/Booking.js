@@ -92,11 +92,6 @@ const Booking = () => {
                 requred
               />
               <input
-                type="number" {...register("number")}
-                placeholder='Price'
-                requred
-              />
-              <input
                 defaultValue="Pending" {...register("status")}
                 requred
               />
